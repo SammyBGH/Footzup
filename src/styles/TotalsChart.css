@@ -1,9 +1,9 @@
 .totals-section {
   margin-top: 2rem;
   padding: 1rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.18));
+  background: transparent;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+
   color: #e9fbff;
 }
 
@@ -21,22 +21,27 @@
 }
 
 .totals-chart-item {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.15)
+  );
   border-radius: 12px;
   padding: 0.8rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
 .totals-chart-item:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
 }
 
 .totals-chart-item h3 {
   text-align: center;
   margin-bottom: 0.6rem;
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: 600;
   color: #e9fbff;
 }
@@ -47,13 +52,13 @@
 }
 
 .recharts-default-tooltip {
-  background: #2a2a2a !important;      
-  border: 1px solid #00cfff !important; 
+  background: #2a2a2a !important;
+  border: 1px solid #00cfff !important;
   border-radius: 8px !important;
   padding: 8px 12px !important;
-  color: #ffffff !important;           
+  color: #ffffff !important;
   font-size: 0.9rem !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
 .recharts-tooltip-label {
