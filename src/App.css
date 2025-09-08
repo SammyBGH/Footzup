@@ -19,9 +19,16 @@ a { color: inherit; cursor: pointer; }
 
 /* MAIN AREA SHIFTED BY SIDEBAR (desktop/tablet) */
 .main-area {
-  margin-left: 220px;  /* default width of open sidebar */
-  transition: filter 0.3s ease, margin-left 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-left: 40px; /* full width */
+  transition: filter 0.3s ease;
 }
+
+/* dim content if needed when dropdown is open can be handled in Sidebar later */
+
 
 .sidebar.closed ~ .main-area {
   margin-left: 70px;   /* collapsed sidebar width */

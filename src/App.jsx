@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
@@ -6,18 +6,14 @@ import Dashboard from "./components/Dashboard";
 import History from "./components/History";
 import Settings from "./components/Settings";
 import About from "./components/About";
-import "./App.css"
+import "./App.css";
 
 export default function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
   return (
     <Router>
       <div className="app-root">
-        <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
-        <div
-          className={`main-area ${isSidebarOpen ? "shifted" : "collapsed"}`}
-        >
+        <Sidebar />
+        <div className="main-area">
           <Header />
           <main className="content-area">
             <Routes>
