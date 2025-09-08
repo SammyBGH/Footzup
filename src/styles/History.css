@@ -30,7 +30,7 @@
   border: none;
   font-size: 0.9rem;
   color: #e9fbff;
-  background: #002431; /* keeps your original input background darker */
+  background: #002431; 
 }
 
 .history-controls input {
@@ -93,13 +93,13 @@
   background: rgba(0, 229, 255, 0.05);
 }
 
-/* Highlight empty values consistently */
+
 .history-table td:empty::after {
   content: "—";
   color: #aaa;
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 768px) {
   .history-controls {
     flex-direction: column;

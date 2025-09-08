@@ -16,7 +16,7 @@ body,
 body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial;
-  background: #071027; /* unified app background */
+  background: #071027; 
   color: #e7fbff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,7 +25,7 @@ body {
 
 
 
-/* subtle scrollbars */
+
 .content-area::-webkit-scrollbar { width:10px; }
 .content-area::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.06);
@@ -34,34 +34,31 @@ body {
 }
 
 
-/* ========== APP LAYOUT ========== */
 .app-root {
   display: flex;
   min-height: 100vh;
   width: 100%;
-  position: relative; /* helps with layering */
+  position: relative; 
 }
 
-/* sidebar is fixed, so main-area must account for its width */
 .main-area {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: filter 0.3s ease; /* for dim effect if we add overlay later */
+  transition: filter 0.3s ease; 
 }
 
-/* ========== CONTENT AREA ========== */
+
 .content-area {
   flex: 1;
   padding: 1.25rem;
-  overflow-y: auto; /* scroll happens here */
+  overflow-y: auto; 
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #00e5ff #041125;
 }
 
-/* scrollbar styling (for Chrome/Edge) */
 .content-area::-webkit-scrollbar {
   width: 8px;
 }
@@ -75,7 +72,7 @@ body {
   border-radius: 4px;
 }
 
-/* ========== UTILITIES ========== */
+/* UTILITIES */
 h1,
 h2,
 h3,
@@ -89,7 +86,7 @@ p {
   font-size: 0.95rem;
 }
 
-/* ========== SIDEBAR OVERLAY ON MOBILE ========== */
+/*  SIDEBAR OVERLAY ON MOBILE  */
 @media (max-width: 720px) {
   .sidebar {
     position: fixed;
@@ -100,7 +97,6 @@ p {
     box-shadow: 4px 0 12px rgba(0, 0, 0, 0.6);
   }
 
-  /* optional dim effect for content when sidebar is open */
   .sidebar.open ~ .main-area {
     filter: brightness(0.8);
   }

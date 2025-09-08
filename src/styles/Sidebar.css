@@ -28,18 +28,16 @@
   margin-bottom: 1rem;
 }
 
-/* text logo in open mode uses gradient text (with fallback) */
 .logo-text {
   font-size: 1.3rem;
   font-weight: 700;
   background: linear-gradient(135deg, #00243b, #003b6f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #dff6ff; /* fallback */
+  color: #dff6ff;
   white-space: nowrap;
 }
 
-/* battery icon styling for closed mode */
 .logo-icon {
   font-size: 1.8rem;
   color: #dff6ff;
@@ -74,7 +72,6 @@
   transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
-/* active/hover effect uses gradient and subtle lift like your original theme */
 .sidebar li a:hover {
   background: linear-gradient(90deg, #003b6f, #005f7a);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);

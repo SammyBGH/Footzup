@@ -100,7 +100,7 @@
   transform: scale(1.05);
 }
 
-/* Responsive stacking */
+
 @media (max-width: 768px) {
   .timeline::before {
     left: 10px;
