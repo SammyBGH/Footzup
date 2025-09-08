@@ -1,0 +1,9 @@
+.chart-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.14));
+  border-radius:12px;
+  padding:0.8rem;
+  color:#e9fbff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.chart-header h4{ margin:0; font-size:1rem; }
+.chart-body{ margin-top:0.5rem; height:240px; }

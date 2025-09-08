@@ -1,0 +1,117 @@
+.about {
+  padding: 2rem;
+  color: #dff6ff;
+  background: #071027;
+  min-height: 100vh;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00e5ff, #005f7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #003b6f, #00e5ff);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.timeline-item.left {
+  flex-direction: row;
+}
+
+.timeline-item.right {
+  flex-direction: row-reverse;
+}
+
+.timeline-item .content {
+  flex: 1;
+  background: rgba(0, 36, 59, 0.7);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item .content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-item .year {
+  font-size: 0.85rem;
+  color: #00e5ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.timeline-item h2 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  color: #dff6ff;
+}
+
+.timeline-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.timeline-item .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.timeline-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .timeline-item .image-container {
+    margin-top: 1rem;
+  }
+}

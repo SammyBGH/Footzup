@@ -1,0 +1,34 @@
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Dashboard from "./components/Dashboard";
+import History from "./components/History";
+import Settings from "./components/Settings";
+import About from "./components/About";
+import "./App.css"
+
+export default function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  return (
+    <Router>
+      <div className="app-root">
+        <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+        <div
+          className={`main-area ${isSidebarOpen ? "shifted" : "collapsed"}`}
+        >
+          <Header />
+          <main className="content-area">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/history" element={<History />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </main>
+        </div>
+      </div>
+    </Router>
+  );
+}
