@@ -1,7 +1,5 @@
-
 h1, h2, h3, h4, h5 { color: #e9fbff; }
 a { color: inherit; cursor: pointer; }
-
 
 .content-area::-webkit-scrollbar { width:10px; }
 .content-area::-webkit-scrollbar-thumb {
@@ -9,12 +7,42 @@ a { color: inherit; cursor: pointer; }
   border-radius: 8px;
   border: 2px solid rgba(0,0,0,0.12);
 }
+
 .app-root {
   overflow: hidden;
 }
 
+.app-header {
+  padding: 0.6rem 0.9rem;
+}
+
+
+/* MAIN AREA SHIFTED BY SIDEBAR (desktop/tablet) */
+.main-area {
+  margin-left: 220px;  /* default width of open sidebar */
+  transition: filter 0.3s ease, margin-left 0.3s ease;
+}
+
+.sidebar.closed ~ .main-area {
+  margin-left: 70px;   /* collapsed sidebar width */
+}
+
+/* MOBILE VIEW: sidebar overlays content */
 @media (max-width: 720px) {
-  .app-sidebar { position:fixed; left:0; width:64px; }
-  .main-area { margin-left:64px; }
-  .app-header { padding:0.6rem 0.9rem; }
+  .main-area {
+    margin-left: 51px !important;  /* do not shrink main area on mobile */
+  }
+
+  .sidebar {
+    width: 220px; /* sidebar width when open */
+    z-index: 1000;
+  }
+
+  .sidebar.closed {
+    width: 64px; /* collapsed mobile sidebar width */
+  }
+
+  .sidebar.open ~ .main-area {
+    filter: brightness(0.8); /* dim main area when sidebar overlays */
+  }
 }

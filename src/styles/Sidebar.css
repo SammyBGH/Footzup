@@ -1,14 +1,17 @@
 .sidebar {
+  position: fixed;       
+  top: 0;
+  left: 0;
+  height: 100vh;         
+  overflow-y: auto;     
   background: #071027;
   color: #dff6ff;
-  min-height: 100vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   transition: width 0.3s ease;
-  overflow: hidden;
-  overflow-y: auto;
   box-shadow: inset -2px 0 8px rgba(0,0,0,0.35);
+  z-index: 1000;
 }
 
 .sidebar.open {
@@ -31,7 +34,7 @@
 .logo-text {
   font-size: 1.3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #00243b, #003b6f);
+  background: linear-gradient(135deg, #1b84c5, #003b6f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #dff6ff;
