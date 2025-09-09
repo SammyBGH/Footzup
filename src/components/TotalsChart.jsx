@@ -96,6 +96,7 @@ export default function TotalsChart() {
 
         <div className="totals-chart-item">
           <h3>Total Voltage & Current</h3>
+
           <ResponsiveContainer width="100%" height={280}>
             <BarChart data={totalsVCData}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -103,7 +104,14 @@ export default function TotalsChart() {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="value" fill="#FF8042" />
+              <Bar dataKey="value" fill="#8884d8">
+                {totalsVCData.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
