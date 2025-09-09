@@ -7,7 +7,6 @@ import History from "./components/History";
 import Settings from "./components/Settings";
 import About from "./components/About";
 import "./App.css";
-import { Analytics } from "@vercel/analytics/next"
 
 export default function App() {
   return (
@@ -23,7 +22,6 @@ export default function App() {
               <Route path="/settings" element={<Settings />} />
               <Route path="/about" element={<About />} />
             </Routes>
-            <Analytics/>
           </main>
         </div>
       </div>
