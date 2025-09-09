@@ -23,6 +23,7 @@ export default function App() {
               <Route path="/settings" element={<Settings />} />
               <Route path="/about" element={<About />} />
             </Routes>
+            <Analytics/>
           </main>
         </div>
       </div>
